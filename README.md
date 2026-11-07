@@ -65,3 +65,42 @@ Required environment variables:
 
 - `DB_USERNAME`
 - `DB_PASSWORD`
+
+## How to Run the Project
+
+### 1. Clone the Repository
+
+git clone https://github.com/mahalingcs/student-management-system-v3.git
+
+### 2. Open the Project
+
+Open the project folder in VS Code or your preferred IDE.
+
+### 3. Configure Database Credentials
+
+Set your MySQL credentials as environment variables in PowerShell:
+
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_mysql_password"
+
+### 4. Run the Application
+
+Execute the following command from the project root directory:
+
+.\mvnw.cmd spring-boot:run
+
+### 5. Access the API
+
+The application runs at:
+
+http://localhost:8080/api/students
+
+## HTTP Response Codes
+
+| Status Code | Description                       |
+|:-----------:|-----------------------------------|
+|     200     | Request successful                |
+|     400     | Bad request - validation failed   |
+|     404     | Student not found                 |
+|     409     | Conflict - duplicate roll number  |
+|     500     | Internal server error             |
